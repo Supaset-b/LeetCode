@@ -11,11 +11,12 @@ func romanToInt(s string) int {
     numIndex := make([]int, len(s))
     result := 0
     for index, num := range s {
-        numIndex[index] = romanMap[string(num)]
+        strNum := string(num)
+        numIndex[index] = romanMap[strNum]
         if index > 0 && numIndex[index] > numIndex[index-1] {
             result -= numIndex[index-1]*2
         }
-        result += romanMap[string(num)]
+        result += romanMap[strNum]
     }
     return result
 }
