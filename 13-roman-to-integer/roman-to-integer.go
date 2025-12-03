@@ -16,7 +16,7 @@ func romanToInt(s string) int {
         if index > 0 && numIndex[index] > numIndex[index-1] {
             result -= numIndex[index-1]*2
         }
-        result += romanMap[strNum]
+        result += numIndex[index]
     }
     return result
 }
