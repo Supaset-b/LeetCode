@@ -7,6 +7,7 @@ func romanToInt(s string) int {
     romanMap["C"] = 100
     romanMap["D"] = 500
     romanMap["M"] = 1000
+    
 
     numIndex := make([]int, len(s))
     result := 0
