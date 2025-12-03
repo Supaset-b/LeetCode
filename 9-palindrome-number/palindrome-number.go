@@ -2,8 +2,7 @@ func isPalindrome(x int) bool {
     if x < 0 {
         return false
     }
-    originalX := x
-    reverseX := 0
+    originalX, reverseX := x, 0
 
     for x != 0 {
         reverseX = (reverseX*10) + (x %10) 
