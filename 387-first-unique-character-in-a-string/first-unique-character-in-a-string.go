@@ -1,22 +1,34 @@
 func firstUniqChar(s string) int {
 
-    mappingIndexRune := make(map[rune]int)
-    mappingRuneBool := make(map[rune]bool)
+    // mappingRuneIndex := make(map[rune]int)
+    // mappingRuneBool := make(map[rune]bool)
     
-    for i, c := range s {
-        if _, value := mappingIndexRune[c]; value{
-            mappingRuneBool[c] = true
-        } else {
-            mappingRuneBool[c] = false
-        }
-        mappingIndexRune[c] = i
+    // for i, c := range s {
+    //     if _, value := mappingRuneIndex[c]; value{
+    //         mappingRuneBool[c] = true
+    //     } else {
+    //         mappingRuneBool[c] = false
+    //     }
+    //     mappingRuneIndex[c] = i
+    // }
+
+    // for index, value := range s {
+    //     if !mappingRuneBool[value] {
+    //         return index
+    //     }
+    // }
+
+    mappingRuneIndex := make(map[rune]int)
+    for _, c := range s {
+        mappingRuneIndex[c]++
     }
 
-    for index, value := range s {
-        if !mappingRuneBool[value] {
-            return index
+    for i, c := range s {
+        if mappingRuneIndex[c] == 1 {
+            return i
         }
     }
+
     
     return -1
 }
