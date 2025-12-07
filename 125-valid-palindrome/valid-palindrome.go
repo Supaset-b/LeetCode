@@ -1,8 +1,8 @@
 func isPalindrome(s string) bool {
 
     var newS string
-    for index, char := range s {
-        if isAlphaNumeric(s[index]) {
+    for _, char := range s {
+        if unicode.IsLetter(char) || unicode.IsDigit(char) {
             newS += string(char)
         }
     }
@@ -17,8 +17,4 @@ func isPalindrome(s string) bool {
         j --
     }
     return true
-}
-
-func isAlphaNumeric(c byte) bool{
-    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')
 }
