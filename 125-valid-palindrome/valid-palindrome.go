@@ -1,13 +1,12 @@
 func isPalindrome(s string) bool {
 
-    lowerS := strings.ToLower(s)
     newS := ""
-    for _, char := range lowerS {
+    for _, char := range s {
         if unicode.IsLetter(char) || unicode.IsDigit(char) {
             newS += string(char)
         }
     }
-    
+    newS = strings.ToLower(newS)
     indexNewS := len(newS)-1
     for i,j := range newS {
         if j != rune(newS[indexNewS-i]) {
