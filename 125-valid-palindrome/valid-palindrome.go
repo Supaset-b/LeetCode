@@ -1,6 +1,6 @@
 func isPalindrome(s string) bool {
 
-    newS := ""
+    var newS string
     for _, char := range s {
         if unicode.IsLetter(char) || unicode.IsDigit(char) {
             newS += string(char)
