@@ -10,7 +10,7 @@ func isPalindrome(s string) bool {
     
     indexNewS := len(newS)-1
     for i,j := range newS {
-        if string(j) != string(newS[indexNewS-i]) {
+        if j != rune(newS[indexNewS-i]) {
             return false
         }
     }
