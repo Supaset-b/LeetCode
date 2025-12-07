@@ -8,11 +8,11 @@ func isPalindrome(s string) bool {
         }
     }
     
+    indexNewS := len(newS)-1
     for i,j := range newS {
-        if string(j) != string(newS[len(newS)-i-1]) {
+        if string(j) != string(newS[indexNewS-i]) {
             return false
         }
     }
-
     return true
 }
