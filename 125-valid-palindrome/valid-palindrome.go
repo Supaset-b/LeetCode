@@ -7,11 +7,16 @@ func isPalindrome(s string) bool {
         }
     }
     newS = strings.ToLower(newS)
-    indexNewS := len(newS)-1
-    for i,j := range newS {
-        if j != rune(newS[indexNewS-i]) {
+    
+    i := 0
+    j := len(newS)-1
+
+    for i < j {
+        if newS[i] != newS[j] {
             return false
-        }
+        } 
+        i ++
+        j --
     }
     return true
 }
