@@ -8,7 +8,8 @@ func isPalindrome(s string) bool {
     }
     newS = strings.ToLower(newS)
     
-    i, j := 0, len(newS)-1
+    i := 0
+    j := len(newS)-1
     for i < j {
         if newS[i] != newS[j] {
             return false
