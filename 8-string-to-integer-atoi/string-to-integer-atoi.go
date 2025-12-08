@@ -1,10 +1,10 @@
 func myAtoi(s string) int {
-    checkBool := true
+    checkSigned := true
     stringInt := ""
     for i := 0; i < len(s); i ++ {
-        if (string(s[i]) >= "0" && string(s[i]) <= "9") || (string(s[i]) == "-" && checkBool) || (string(s[i]) == "+" && checkBool) {
+        if (string(s[i]) >= "0" && string(s[i]) <= "9") || (string(s[i]) == "-" && checkSigned) || (string(s[i]) == "+" && checkSigned) {
             stringInt += string(s[i])
-            checkBool = false
+            checkSigned = false
         } else if string(s[i]) == " " {
             if len(stringInt) > 0 {
                 break
