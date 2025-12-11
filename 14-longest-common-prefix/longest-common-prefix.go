@@ -1,4 +1,7 @@
 func longestCommonPrefix(strs []string) string {
+    if len(strs) == 0 {
+        return ""
+    }
     prefix := string(strs[0])
     preMaxlength := len(prefix)
     for _,str := range strs {
