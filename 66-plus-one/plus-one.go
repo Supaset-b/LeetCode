@@ -5,8 +5,7 @@ func plusOne(digits []int) []int {
         if digits[i]/10 > 0 {
             digits[i] = digits[i]%10
             if i == 0 {
-                digits = append([]int{1}, digits...)
-                break
+                return append([]int{1}, digits...)
             }
             digits[i-1] += 1
         }
