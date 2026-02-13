@@ -1,7 +1,6 @@
 func lengthOfLastWord(s string) int {
     arrWord := [1000]string{""}
-    indexArr := 0
-    cntWhitespace := 0
+    indexArr,cntWhitespace := 0, 0
     for _,n := range s {
         if n == ' '{
             indexArr++
