@@ -3,8 +3,9 @@ func repeatedNTimes(nums []int) int {
     for _,n := range nums {
         if mapN[n] {
             return n
+        } else {
+            mapN[n] = true
         }
-        mapN[n] = true
     }
     return -1
 }
