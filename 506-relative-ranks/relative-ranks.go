@@ -15,7 +15,7 @@ func findRelativeRanks(score []int) []string {
         switch mappingSort[s] {
             case lengthScore-1:
                 rankScore[i] = "Gold Medal"
-             case lengthScore-2:
+            case lengthScore-2:
                 rankScore[i] = "Silver Medal"
             case lengthScore-3:
                 rankScore[i] = "Bronze Medal"
