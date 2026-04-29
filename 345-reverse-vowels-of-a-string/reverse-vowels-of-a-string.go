@@ -1,19 +1,20 @@
 func reverseVowels(s string) string {
-    left:=0
-    right:=len(s)-1
+    left := 0
+    right := len(s)-1
     runeS := []rune(s)
     
     for left<=right {
-        if isVowels(runeS[left]) && isVowels(runeS[right]) {
-            // reverseVowels
+        leftIsVowel := isVowels(runeS[left])
+        rightIsVewel := isVowels(runeS[right])
+        if  leftIsVowel && rightIsVewel {
             temp := runeS[left]
             runeS[left] = runeS[right]
             runeS[right] = temp
             left++
             right--
-        } else if isVowels(runeS[left]) {
+        } else if leftIsVowel {
             right--
-        } else if isVowels(runeS[right]) {
+        } else if rightIsVewel {
             left++
         } else {
             left++
