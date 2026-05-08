@@ -5,20 +5,25 @@ func numJewelsInStones(jewels string, stones string) int {
     }
 
     cnt := 0
-    l := 0
-    r := len(stones)-1
-    for l<=r {
-        if m[rune(stones[l])] {
-            cnt++
-            if l==r {
-                break
-            }
+    // l := 0
+    // r := len(stones)-1
+    // for l<=r {
+    //     if m[rune(stones[l])] {
+    //         cnt++
+    //         if l==r {
+    //             break
+    //         }
+    //     }
+    //     if m[rune(stones[r])] {
+    //         cnt++
+    //     }
+    //     l++
+    //     r--
+    // }
+    for _, s := range stones {
+        if m[s] {
+            cnt ++
         }
-        if m[rune(stones[r])] {
-            cnt++
-        }
-        l++
-        r--
     }
     return cnt 
 }
