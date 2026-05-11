@@ -1,6 +1,12 @@
 func fib(n int) int {
-    if n <= 1 {
-        return n
+    if n == 0 {
+        return 0
     }
-    return fib(n-1) + fib(n-2)
+    prev := 0
+    curr := 1
+
+    for i:=2; i<=n; i++ {
+        prev, curr = curr, prev + curr
+    }
+    return curr
 }
